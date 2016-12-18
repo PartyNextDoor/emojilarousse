@@ -13,17 +13,17 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var thelabel: UILabel!
     
-    var tapCount = 0 
+    @IBOutlet weak var text1: UITextField!
+    
+    
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func Tap(sender: AnyObject) {
-        tapCount = tapCount + 1
+    
+      thelabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
         
-        if tapCount >= 10{
-            
-    thelabel.text = "you tapped the but 10x"
-    }
         }
-
+    
     override func viewDidLoad() { thelabel.text = "prince"
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

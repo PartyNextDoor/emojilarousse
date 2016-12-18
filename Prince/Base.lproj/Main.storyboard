@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEj-aF-Fep">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEj-aF-Fep">
                                 <rect key="frame" x="279" y="98" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-gD-tit">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-gD-tit">
                                 <rect key="frame" x="277" y="120" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
@@ -31,21 +31,57 @@
                                     <action selector="Tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X6x-cL-Z5B"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2n-eN-zkN">
+                                <rect key="frame" x="0.0" y="189" width="25" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg7-eU-AV6">
+                                <rect key="frame" x="264" y="238" width="75" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6uC-tE-kpc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-WK-cNN">
+                                <rect key="frame" x="264" y="189" width="75" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="2Wq-Np-SeV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="Kft-h6-OFK"/>
+                                    <constraint firstAttribute="width" constant="60" id="yyt-yO-UlX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BEj-aF-Fep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tR-eX-dTM"/>
                             <constraint firstItem="BEj-aF-Fep" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="Enj-Px-qgT"/>
+                            <constraint firstItem="Sg7-eU-AV6" firstAttribute="top" secondItem="L6A-WK-cNN" secondAttribute="bottom" constant="19" id="G98-jF-9d8"/>
+                            <constraint firstItem="L6A-WK-cNN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNE-Ue-GkC"/>
+                            <constraint firstItem="Sg7-eU-AV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MB3-BQ-FT4"/>
+                            <constraint firstItem="Sg7-eU-AV6" firstAttribute="top" secondItem="X2n-eN-zkN" secondAttribute="bottom" constant="19" id="NqF-3T-4Qc"/>
+                            <constraint firstItem="54q-gD-tit" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4n-nl-F4n"/>
+                            <constraint firstItem="X2n-eN-zkN" firstAttribute="top" secondItem="54q-gD-tit" secondAttribute="bottom" constant="33" id="n9j-LV-ntc"/>
                             <constraint firstItem="54q-gD-tit" firstAttribute="top" secondItem="BEj-aF-Fep" secondAttribute="bottom" constant="8" id="oMd-V4-L0Z"/>
                             <constraint firstItem="54q-gD-tit" firstAttribute="top" secondItem="BEj-aF-Fep" secondAttribute="bottom" constant="8" id="qJL-GH-NnW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="L6A-WK-cNN" id="M9J-Qm-LU4"/>
+                        <outlet property="text2" destination="Sg7-eU-AV6" id="V7Q-5P-ZAO"/>
                         <outlet property="thelabel" destination="BEj-aF-Fep" id="Mt0-Sc-lm9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="136"/>
         </scene>
     </scenes>
 </document>
